@@ -2,7 +2,7 @@
   /* Main colors */
   --link: green;
   --link-highlight: rgb(105, 180, 105);
-  --background: rgb(175, 198, 240);
+  --background: rgb(190, 209, 245);
   --nav-bar: rgb(147, 177, 231);
   --nav-bar-highlight: rgb(114, 96, 196);
   --main-text: rgb(51, 44, 80);
@@ -16,7 +16,7 @@ body {
 
 h1 {
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
   color: rgb(44, 28, 116);
   margin-left: 1rem;
 }
@@ -46,13 +46,16 @@ p {
 
 main {
   padding: 0.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
 }
 
 footer {
   font-size: 0.75rem;
-  display: block;
-  position: absolute;
   color: rgb(75, 75, 75);
+  position: relative;
+  bottom: 0;
 }
 
 /* Main menu / navigation styling */
@@ -96,6 +99,9 @@ audio {
 
 iframe {
   border: 1rem solid var(--nav-bar);
+  display: block;
+  margin: auto;
+  width: 80%;
 }
 
 .gallery {
@@ -109,6 +115,11 @@ iframe {
 
 #about-image, #home-image {
   width: 50%;
+}
+
+#resume {
+  width: 54rem;
+  height: 72rem;
 }
 
 /* Adjustments for small screen sizes */
