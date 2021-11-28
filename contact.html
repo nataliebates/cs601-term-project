@@ -25,6 +25,46 @@
     <main>
       <p>Email: nataliegracebates@gmail.com</p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/natalie-grace-bates/" target="_blank">linkedin.com/in/natalie-grace-bates</a></p>
+
+      <div id="contactFormDiv">
+        <form id="contactForm" action="php/contactForm.php" method="post">
+          <h3>Get into contact with me!</h5>
+  
+          <!-- Text inputs -->
+          <h5>Your contact information</h5>
+          <label class="text" for="firstName">First Name:</label>
+          <input class="text" type="text" id="firstName" name="firstName" required>
+          <br />
+          <label class="text" for="lastName">Last Name:</label>
+          <input class="text" type="text" id="lastName" name="lastName" required>
+          <br />
+          <label class="text" for="email">Email Address:</label>
+          <input class="text" type="email" id="email" name="email" required>
+          <br />
+          <p id="textInputMessage"></p>
+  
+          <!-- Select box -->
+          <h5>How did you find my website?</h5>
+          <select id="select" name="select" required>
+            <option class="select" value="placeholder" disabled selected>Select one</option>
+            <option class="select" value="class">A Boston University class</option>
+            <option class="select" value="linkedin">LinkedIn</option>
+            <option class="select" value="jobApplication">Job application</option>
+            <option class="select" value="searchEngine">Google/other search engine</option>
+            <option class="select" value="other">Other</option>
+          </select>
+  
+          <!-- Checkboxes -->
+          <h5>Message</h5>
+          <textarea id="formMessage" name="message" rows="5" cols="50"></textarea>
+          <br />
+  
+          <!-- Submit button -->
+          <input id="submitFormButton" type="submit" name="submitButton" value="Submit">
+  
+        </form>
+      </div>
+      <!-- <script src="js/formValidation.js"></script> -->
     </main>
     <footer>
       © Copyright 2021 Natalie Bates

@@ -122,6 +122,39 @@ iframe {
   height: 72rem;
 }
 
+#contactForm {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: right;
+  background-color:rgb(114, 96, 196);
+}
+
+#submitFormButton {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  background-color: rgb(75, 139, 75);
+  border: none;
+}
+
+#submitFormButton:hover {
+  background-color: rgb(107, 179, 107);
+}
+
+#submitFormButton:active {
+  background-color: rgb(157, 211, 157);
+}
+
 /* Adjustments for small screen sizes */
 @media (max-width: 500px) {
 
