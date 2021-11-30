@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/favicon.png">
     <title>Contact | Natalie Bates</title>
@@ -22,40 +23,48 @@
       <h1>Contact</h1>
 
     </header>
-    <main>
-      <p>Email: nataliegracebates@gmail.com</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/natalie-grace-bates/" target="_blank">linkedin.com/in/natalie-grace-bates</a></p>
+    <main id="contactPage">
+      <div id="contactPageText">
+        <h4>
+          I can be reached on a number of platforms. Reach out or check out my projects by following the links below,
+          or fill out the contact form to the right.
+        </h4>
+        <p>Email: nataliegracebates@gmail.com</p>
+        <p>GitHub: <a href="https://github.com/nataliebates" target="_blank">github.com/nataliebates</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/natalie-grace-bates/" target="_blank">linkedin.com/in/natalie-grace-bates</a></p>  
+      </div>
 
       <div id="contactFormDiv">
-        <form id="contactForm" action="php/contactForm.php" method="post">
-          <h3>Get into contact with me!</h5>
-  
+        <h3 id="contactFormHeader">Get into contact with me!</h5>
+        <h4 id="submissionMessage">I will try to respond to inquiries in a timely manner.</h5>
+        <form
+          id="contactForm"
+          method="post"
+          enctype=”multipart/form-data”
+        >
           <!-- Text inputs -->
-          <h5>Your contact information</h5>
-          <label class="text" for="firstName">First Name:</label>
-          <input class="text" type="text" id="firstName" name="firstName" required>
-          <br />
-          <label class="text" for="lastName">Last Name:</label>
-          <input class="text" type="text" id="lastName" name="lastName" required>
+          <h4>Your contact information</h5>
+          <label class="text" for="name">Name:</label>
+          <input class="text" type="text" id="name" name="name" required>
           <br />
           <label class="text" for="email">Email Address:</label>
           <input class="text" type="email" id="email" name="email" required>
           <br />
-          <p id="textInputMessage"></p>
+          <p id="contactFormErrorMessage"></p>
   
           <!-- Select box -->
-          <h5>How did you find my website?</h5>
+          <h4>How did you find my website?</h5>
           <select id="select" name="select" required>
             <option class="select" value="placeholder" disabled selected>Select one</option>
-            <option class="select" value="class">A Boston University class</option>
-            <option class="select" value="linkedin">LinkedIn</option>
-            <option class="select" value="jobApplication">Job application</option>
-            <option class="select" value="searchEngine">Google/other search engine</option>
-            <option class="select" value="other">Other</option>
+            <option class="select" value="A Boston University class">A Boston University class</option>
+            <option class="select" value="LinkedIn">LinkedIn</option>
+            <option class="select" value="Job application">Job application</option>
+            <option class="select" value="Google/other search engine">Google/other search engine</option>
+            <option class="select" value="Other">Other</option>
           </select>
   
-          <!-- Checkboxes -->
-          <h5>Message</h5>
+          <!-- Text area input -->
+          <h4>Message</h5>
           <textarea id="formMessage" name="message" rows="5" cols="50"></textarea>
           <br />
   
@@ -64,7 +73,7 @@
   
         </form>
       </div>
-      <!-- <script src="js/formValidation.js"></script> -->
+      <script src="js/formValidation.js"></script>
     </main>
     <footer>
       © Copyright 2021 Natalie Bates

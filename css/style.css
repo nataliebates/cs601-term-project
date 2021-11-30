@@ -1,11 +1,13 @@
 :root {
   /* Main colors */
-  --link: green;
-  --link-highlight: rgb(105, 180, 105);
-  --background: rgb(190, 209, 245);
-  --nav-bar: rgb(147, 177, 231);
-  --nav-bar-highlight: rgb(114, 96, 196);
-  --main-text: rgb(51, 44, 80);
+  --link: rgb(114, 160, 114);
+  --link-highlight: rgb(159, 218, 159);
+  --background: rgb(37, 25, 43);
+  --nav-bar: rgb(50, 36, 73);
+  --nav-bar-highlight: rgb(72, 52, 104);
+  --main-text: rgb(204, 197, 206);
+  --secondary-text: rgba(244, 215, 253, 0.945);
+  --tertiary-text: rgba(255, 200, 157, 0.733);
 }
 
 /* General component styling */
@@ -15,19 +17,27 @@ body {
 }
 
 h1 {
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: rgb(44, 28, 116);
-  margin-left: 1rem;
+  color: rgb(207, 121, 196);
 }
 
 h2 {
   letter-spacing: 0.2rem;
+  color:var(--secondary-text);
 }
 
 h3 {
   text-decoration-line: underline;
   text-decoration-style: dotted;
+  color:var(--secondary-text);
+}
+
+h4 {
+  color: var(--tertiary-text);
+  font-weight: lighter;
+  font-size: 1.2rem;
 }
 
 a {
@@ -39,7 +49,7 @@ a:hover {
   color: var(--link-highlight);
 }
 
-p {
+p, label.text, table {
   font-size: 1.1rem;
   color:var(--main-text);
 }
@@ -76,6 +86,7 @@ nav {
   padding: 1rem;
   padding-left: 0rem;
   margin: 0;
+  align-items: center;
 }
 
 .mainMenuItem {
@@ -94,6 +105,10 @@ nav {
 
 /* Media styling */
 audio {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3rem;
   width: 60%;
 }
 
@@ -114,6 +129,9 @@ iframe {
 }
 
 #about-image, #home-image {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   width: 50%;
 }
 
@@ -122,37 +140,64 @@ iframe {
   height: 72rem;
 }
 
-#contactForm {
-  display: inline-block;
+/* Contact page styling */
+#contactPage {
+  display: flex;
+}
+
+#contactPageText {
+  padding-right: 2rem;
+}
+
+#contactFormDiv {
   margin-left: auto;
-  margin-right: auto;
-  padding-right: 5rem;
-  padding-left: 5rem;
+  text-align: center;
+  background-color:rgb(27, 65, 48);
+  padding-right: 3rem;
+  padding-left: 3rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  border-radius: 5px;
+}
+
+#submissionMessage {
+  display: none;
+}
+
+#contactForm {
+  display: inline-block;
   text-align: right;
-  background-color:rgb(114, 96, 196);
 }
 
 #submitFormButton {
-  margin-top: 2rem;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   font-size: 1rem;
   font-weight: bold;
-  color: rgb(0, 0, 0);
-  background-color: rgb(75, 139, 75);
+  color: black;
+  background-color: rgb(128, 75, 139);
   border: none;
 }
 
 #submitFormButton:hover {
-  background-color: rgb(107, 179, 107);
+  background-color: rgb(162, 93, 175);
 }
 
 #submitFormButton:active {
-  background-color: rgb(157, 211, 157);
+  background-color: rgb(207, 121, 224);
+}
+
+#contactFormErrorMessage {
+  color: rgb(245, 78, 78);
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 /* Adjustments for small screen sizes */
