@@ -1,41 +1,57 @@
 :root {
   /* Main colors */
-  --link: rgb(114, 160, 114);
-  --link-highlight: rgb(159, 218, 159);
-  --background: rgb(37, 25, 43);
-  --nav-bar: rgb(50, 36, 73);
-  --nav-bar-highlight: rgb(72, 52, 104);
-  --main-text: rgb(204, 197, 206);
-  --secondary-text: rgba(244, 215, 253, 0.945);
-  --tertiary-text: rgba(255, 200, 157, 0.733);
+  --link: #DCA8AA;
+  --link-highlight: #E8C5C6;
+  --background: #190F1A;
+  --card-color: #1E3233;
+  --nav-bar: #321E34;
+  --nav-bar-highlight: #3F2541;
+  --main-text: #C2B5AC;
+  --secondary-text: #B9D39C;
+  --footer: #653C68;
+  --button: #CB7C80;
+  --button-hover: #D6999C;
+  --button-active: #E2B6B8;
+}
+
+@font-face {
+  font-family: "Rosario";
+  src: url("../fonts/Rosario/Rosario-Italic-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Yantramanav";
+  src: url("../fonts/Yantramanav/Yantramanav-Regular.ttf")
+}
+
+@font-face {
+  font-family: "Yantramanav-Thin";
+  src: url("../fonts/Yantramanav/Yantramanav-Thin.ttf")
 }
 
 /* General component styling */
 body {
   background-color: var(--background);
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Yantramanav', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 h1 {
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  color: rgb(207, 121, 196);
+  font-size: 3rem;
+  color: var(--link);
+  font-family: 'Yantramanav-Thin';
+}
+
+h2, h3, h4 {
+  color: var(--secondary-text);
 }
 
 h2 {
   letter-spacing: 0.2rem;
-  color:var(--secondary-text);
-}
-
-h3 {
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-  color:var(--secondary-text);
+  font-family: 'Rosario';
 }
 
 h4 {
-  color: var(--tertiary-text);
   font-weight: lighter;
   font-size: 1.2rem;
 }
@@ -63,7 +79,7 @@ main {
 
 footer {
   font-size: 0.75rem;
-  color: rgb(75, 75, 75);
+  color: var(--footer);
   position: relative;
   bottom: 0;
 }
@@ -99,7 +115,7 @@ nav {
 }
 
 .mainMenuItem a:hover {
-  background-color:var(--nav-bar-highlight);
+  background-color: var(--nav-bar-highlight);
   color: var(--link-highlight);
 }
 
@@ -114,6 +130,7 @@ audio {
 
 iframe {
   border: 1rem solid var(--nav-bar);
+  border-radius: 5px;
   display: block;
   margin: auto;
   width: 80%;
@@ -152,7 +169,7 @@ iframe {
 #contactFormDiv {
   margin-left: auto;
   text-align: center;
-  background-color:rgb(27, 65, 48);
+  background-color: var(--card-color);
   padding-right: 3rem;
   padding-left: 3rem;
   padding-top: 1rem;
@@ -181,17 +198,18 @@ iframe {
   padding-left: 1.5rem;
   font-size: 1rem;
   font-weight: bold;
-  color: black;
-  background-color: rgb(128, 75, 139);
+  color: var(--background);
+  background-color: var(--button);
   border: none;
+  border-radius: 3px;
 }
 
 #submitFormButton:hover {
-  background-color: rgb(162, 93, 175);
+  background-color: var(--button-hover);
 }
 
 #submitFormButton:active {
-  background-color: rgb(207, 121, 224);
+  background-color: var(--button-active);
 }
 
 #contactFormErrorMessage {
