@@ -1,7 +1,13 @@
-const form = document.getElementById("contactForm");
+/**
+ * Handles the validation and submission for the form on the Contact page.
+ */
 
-form.addEventListener("submit", function() {
-  let formIsValid = validateForm();
+
+/**
+ * Called when the event listener for the contact form's submit button is triggered.
+ */
+let onSubmit = (event) => {
+  let formIsValid = validateForm(event);
 
   if (formIsValid) {
     submitForm();
@@ -11,7 +17,7 @@ form.addEventListener("submit", function() {
     document.getElementById('contactForm').style.display = "none";
     document.getElementById('submissionMessage').style.display = "block";
   }
-}, false);
+}
 
 /**
  * Checks each text input for valid values, preventing the submit event from
@@ -19,19 +25,20 @@ form.addEventListener("submit", function() {
  * @param {} event The form submit event 
  * @returns true if form was successfully validated, false otherwise.
  */
-function validateForm(event) {
+let validateForm = (event) => {
   let isValid = true;
-  document.getElementById("contactFormErrorMessage").innerHTML = "";
   let name = document.getElementById("name").value;
+  let contactFormErrorMessage = document.getElementById("contactFormErrorMessage");
+  contactFormErrorMessage.innerHTML = "";
 
   if (name.length < 2) {
-    document.getElementById("contactFormErrorMessage").innerHTML = "*Name must be a minimum of 2 characters in length.";
+    contactFormErrorMessage.innerHTML += "*Name must be a minimum of 2 characters in length.<br>";
     isValid = false;
     event.preventDefault();
   }
 
   if (stringContainsNonAlphabet(name)) {
-    document.getElementById("contactFormErrorMessage").innerHTML = "*Name must contain only alphabet characters (a-z and A-Z).";
+    contactFormErrorMessage.innerHTML += "*Name must contain only alphabet characters (a-z and A-Z).<br>";
     isValid = false;
     event.preventDefault();
   }
@@ -44,7 +51,7 @@ function validateForm(event) {
  * @param {string} stringToValidate 
  * @returns True if the string contains non-alphabet characters, false otherwise.
  */
-function stringContainsNonAlphabet(stringToValidate) {
+let stringContainsNonAlphabet = (stringToValidate) => {
   for (let i = 0; i < stringToValidate.length; i++) {
     if (!(/[a-zA-Z]/).test(stringToValidate.charAt(i))) {
       return true;
@@ -55,7 +62,7 @@ function stringContainsNonAlphabet(stringToValidate) {
 /**
  * Prepares the content the user submitted to the contact form into an email
  */
-function submitForm() {
+let submitForm = () => {
   $(function() {
     body = ("Name: " + $('#name').val() + "  Email: " + $('#email').val() +
             "  How I found your website: " + $('#select').val() +                   
@@ -63,3 +70,7 @@ function submitForm() {
     window.location = "mailto:nataliegracebates@gmail.com?subject=Natalie Bates Contact Form&body=" + body;
   });
 }
+
+
+const form = document.getElementById("contactForm");
+form.addEventListener("submit", onSubmit, false);

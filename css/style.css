@@ -3,17 +3,17 @@
   --link: #DCA8AA;
   --link-highlight: #E8C5C6;
   --background: #190F1A;
-  --card-color: #1E3233;
+  --card-color: #1e3233e0;
   --nav-bar: #321E34;
   --nav-bar-highlight: #3F2541;
   --main-text: #C2B5AC;
   --secondary-text: #B9D39C;
-  --footer: #653C68;
   --button: #CB7C80;
   --button-hover: #D6999C;
   --button-active: #E2B6B8;
 }
 
+/* Imported fonts */
 @font-face {
   font-family: "Rosario";
   src: url("../fonts/Rosario/Rosario-Italic-VariableFont_wght.ttf");
@@ -79,9 +79,42 @@ main {
 
 footer {
   font-size: 0.75rem;
-  color: var(--footer);
-  position: relative;
+  color: var(--link);
+  position: fixed;
+  right: 0;
   bottom: 0;
+}
+
+.card {
+  background-color: var(--card-color);
+  padding-right: 3rem;
+  padding-left: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+/* Home page styling */
+#home-header {
+  background-color: var(--nav-bar);
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 5px;
+}
+
+#home-body {
+  background-image: url('../images/last_week_at_ualbany.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#home-content {
+  display: inline-block;
 }
 
 /* Main menu / navigation styling */
@@ -119,7 +152,30 @@ nav {
   color: var(--link-highlight);
 }
 
-/* Media styling */
+/* About page styling */
+#about-image {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+}
+
+#about-card {
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  display: inline;
+  text-align: left;
+}
+
+th {
+  padding-right: 3rem;
+}
+
 audio {
   display: block;
   margin-right: auto;
@@ -128,6 +184,7 @@ audio {
   width: 60%;
 }
 
+/* Creative Projects page styling */
 iframe {
   border: 1rem solid var(--nav-bar);
   border-radius: 5px;
@@ -138,6 +195,7 @@ iframe {
 
 .gallery {
   width: 33%;
+  height: auto;
 }
 
 #village-symphony-video {
@@ -145,13 +203,8 @@ iframe {
   height: 338px;
 }
 
-#about-image, #home-image {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 50%;
-}
 
+/* Resume page styling */
 #resume {
   width: 54rem;
   height: 72rem;
@@ -169,12 +222,6 @@ iframe {
 #contactFormDiv {
   margin-left: auto;
   text-align: center;
-  background-color: var(--card-color);
-  padding-right: 3rem;
-  padding-left: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-radius: 5px;
 }
 
 #submissionMessage {
@@ -232,7 +279,7 @@ iframe {
   }
 
   /* Allow most media to essentially fill the smaller screen */
-  img, .gallery, #village-symphony-video, #about-image, #home-image {
+  img, .gallery, #village-symphony-video, #about-image {
     width: 92%;
   }
 
