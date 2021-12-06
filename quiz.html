@@ -4,9 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/favicon.png">
-    <title>Home | Natalie Bates</title>
+    <title>Quiz | Natalie Bates</title>
   </head>
-  <body id="home-body">
+  <body>
     <header>
       <!-- Navigational menu used on all pages -->
       <nav>
@@ -20,16 +20,24 @@
         </ul>
       </nav>
 
-      <h1 id="home-header">Welcome</h1>
+      <h1>"Get to Know Natalie" Quiz</h1>
+
     </header>
-    <main>
-      <div class="card" id="home-content">
-        <h2>Hi, I'm Natalie.</h2>
-        <p>Explore this site to find out more about me and what I spend my time on.</p>
+    <main id="quiz-main">
+      <h3>Take the quiz below to see how well you know me from browsing my site.</h3>
+      <button id="start-quiz-button" class="button">Start Quiz</button>
+
+      <div id="quiz-card" class="card">
+        <h4 id="quiz-question">Question</h4>
+        <button id="quiz-reveal" class="button">Reveal Answer</button>
+        <h4 id="quiz-answer">Answer</h4>
+        <button id="next-question" class="button">Next Question</button>
       </div>
+
     </main>
     <footer>
       © Copyright 2021 Natalie Bates
     </footer>
   </body>
+  <script src="js/quiz.js"></script>
 </html>

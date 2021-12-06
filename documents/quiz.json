@@ -1,0 +1,24 @@
+{
+  "quiz": [
+      {
+        "question": "Q: Where does Natalie work?",
+        "answer": "A: SRC, Inc."
+      },
+      {
+        "question": "Q: What aspect of web development does Natalie prefer: front-end or back-end?",
+        "answer": "A: Front-end"
+      },
+      {
+        "question": "Q: Through which university is Natalie pursuing her Master's degree?",
+        "answer": "A: Boston University"
+      },
+      {
+        "question": "Q: What is Natalie's favorite video game?",
+        "answer": "A: Stardew Valley"
+      },
+      {
+        "question": "Q: What product does Natalie have experience photographing?",
+        "answer": "A: Jewelry (Earrings)"
+      }
+    ]
+}
