@@ -18,7 +18,11 @@
       },
       {
         "question": "Q: What product does Natalie have experience photographing?",
-        "answer": "A: Jewelry (Earrings)"
+        "answer": "A: Jewelry"
+      },
+      {
+        "question": "Q: What is Natalie's favorite color?",
+        "answer": "A: Forest green"
       }
     ]
 }
