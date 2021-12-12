@@ -339,10 +339,18 @@ textarea {
   margin-right: auto;
   margin-top: 3rem;
   display: none;
+
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 #quiz-question {
   font-style: italic;
+}
+
+#quiz-button-container {
+  justify-content: flex-end;
+  display: flex;
 }
 
 /* Adjustments for small screen sizes */

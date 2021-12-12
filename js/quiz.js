@@ -16,7 +16,7 @@ async function getQuizData() {
       quizData = data.quiz;
 
       startButton.style.display = "none";
-      quizCard.style.display = "block";
+      quizCard.style.display = "flex";
       displayNextQuestion();
     })
     .catch(error => {
