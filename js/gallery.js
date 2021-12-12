@@ -1,12 +1,12 @@
 const imageMap = new Map();
-imageMap.set("img1", {"src": "images/coffee_1.jpg", "alt": "Hands holding a matcha latte", "index": 0});
+imageMap.set("img1", {"src": "images/coffee_1.JPG", "alt": "Hands holding a matcha latte", "index": 0});
 imageMap.set("img2", {"src": "images/oregon.jpg", "alt": "Oregon landscape", "index": 1});
-imageMap.set("img3", {"src": "images/jewelry_1.jpg", "alt": "Purple and gold dangly earrings in a decorative dish", "index": 2});
-imageMap.set("img4", {"src": "images/coffee_2.jpg", "alt": "An espresso machine", "index": 3});
-imageMap.set("img5", {"src": "images/jewelry_3.jpg", "alt": "Red and gold u-shaped earrings on a white surface", "index": 4});
-imageMap.set("img6", {"src": "images/coffee_3.jpg", "alt": "A cappuccino and a croissant on a table", "index": 5});
-imageMap.set("img7", {"src": "images/thacher.jpg", "alt": "Coin-operated binoculars against an autumn landscape", "index": 6});
-imageMap.set("img8", {"src": "images/jewelry_4.jpg", "alt": "Circular green earrings and potted plants", "index": 7});
+imageMap.set("img3", {"src": "images/jewelry_1.JPG", "alt": "Purple and gold dangly earrings in a decorative dish", "index": 2});
+imageMap.set("img4", {"src": "images/coffee_2.JPG", "alt": "An espresso machine", "index": 3});
+imageMap.set("img5", {"src": "images/jewelry_3.JPG", "alt": "Red and gold u-shaped earrings on a white surface", "index": 4});
+imageMap.set("img6", {"src": "images/coffee_3.JPG", "alt": "A cappuccino and a croissant on a table", "index": 5});
+imageMap.set("img7", {"src": "images/thacher.JPG", "alt": "Coin-operated binoculars against an autumn landscape", "index": 6});
+imageMap.set("img8", {"src": "images/jewelry_4.JPG", "alt": "Circular green earrings and potted plants", "index": 7});
 
 const imageKeys = Array.from(imageMap.keys());
 
