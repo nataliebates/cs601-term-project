@@ -7,51 +7,74 @@
     <title>Creative Projects | Natalie Bates</title>
   </head>
   <body>
-    <header>
-      <!-- Navigational menu used on all pages -->
-      <nav>
-        <ul class="mainMenu">
-          <li class="mainMenuItem"><a href="index.html">Home</a></li>
-          <li class="mainMenuItem"><a href="about.html">About</a></li>
-          <li class="mainMenuItem"><a href="resume.html">Résumé</a></li>
-          <li class="mainMenuItem"><a href="projects.html">Creative Projects</a></li>
-          <li class="mainMenuItem"><a href="contact.html">Contact</a></li>
-          <li class="mainMenuItem"><a href="quiz.html">Quiz</a></li>
-        </ul>
-      </nav>
+    <div id="galleryApp">
+      <header>
+        <!-- Navigational menu used on all pages -->
+        <nav>
+          <ul class="mainMenu">
+            <li class="mainMenuItem"><a href="index.html">Home</a></li>
+            <li class="mainMenuItem"><a href="about.html">About</a></li>
+            <li class="mainMenuItem"><a href="resume.html">Résumé</a></li>
+            <li class="mainMenuItem"><a href="projects.html">Creative Projects</a></li>
+            <li class="mainMenuItem"><a href="contact.html">Contact</a></li>
+            <li class="mainMenuItem"><a href="quiz.html">Quiz</a></li>
+            <li class="mainMenuItem" id="navName">Natalie Bates</li>
+          </ul>
+        </nav>
+  
+        <h1>Creative Projects</h1>
+      </header>
+      <main>
+        <!-- Photography section (all photos displayed are my own) -->
+        <h2 id="photography-heading">photography</h2>
+        <p>
+          Shown below are all photos I have taken for a variety of occasions, including: promotional photos for a local coffee shop, 
+          product photos for a jewelry brand, and during my personal travels. I also love taking pictures of my friends and family!
+        </p>
 
-      <h1>Creative Projects</h1>
-    </header>
-    <main>
-      <!-- Photography section -->
-      <h2>photography</h2>
-      <p>
-        Shown below are all photos I have taken for a variety of occasions, including: promotional photos for a local coffee shop, 
-        product photos for a jewelry brand, and during my personal travels. I also love taking pictures of my friends and family!
-      </p>
-      <!-- All photos created and owned by me -->
-      <img class="gallery" src="images/coffee_1.JPG" alt="Hands holding a matcha latte">
-      <img class="gallery" src="images/oregon.jpg" alt="Oregon landscape">
-      <img class="gallery" src="images/jewelry_1.JPG" alt="Purple and gold dangly earrings in a decorative dish">
-      <img class="gallery" src="images/coffee_2.JPG" alt="An espresso machine">
-      <img class="gallery" src="images/jewelry_3.JPG" alt="Red and gold u-shaped earrings on a white surface">
-      <img class="gallery" src="images/coffee_3.JPG" alt="A cappuccino and a croissant on a table">
-      <img class="gallery" src="images/thacher.JPG" alt="Coin-operated binoculars against an autumn landscape">
-      <img class="gallery" src="images/jewelry_4.JPG" alt="Circular green earrings and potted plants">
+        <div id="featuredGalleryImageDiv">
+          <button class="button" @click="displayPrevious()">
+            < 
+          </button>
 
-      <!-- Film section -->
-      <h2>film</h2>
-      <p>
-        Below is a short film I created as a project for a film course I took as an undergraduate.
-        It is modeled after the <a href="https://en.wikipedia.org/wiki/Documentary_film#City-symphony" target="_blank">city-symphony</a> 
-        style of avant-doc film that became popular in the 1920s, but with a twist: rather than feature a city, this film showcases the
-        small village in upstate New York where I spent most of my adolescence.
-      </p>
-      <iframe id="village-symphony-video" src="https://www.youtube.com/embed/sQ2CW6B8Ma8" allowfullscreen></iframe>
+          <img id="featuredGalleryImage" :src="featuredGalleryImageSrc" :alt="featuredGalleryImageAlt">
+          
+          <button class="button" @click="displayNext()">
+            >
+          </button>
+        </div>
 
-    </main>
-    <footer>
-      © Copyright 2021 Natalie Bates
-    </footer>
+        <img class="gallery" :src="img1.src" :alt="img1.alt" id="img1" @click="selectImage($event.target.id)">
+        <img class="gallery" :src="img2.src" :alt="img2.alt" id="img2" @click="selectImage($event.target.id)">
+        <img class="gallery" :src="img3.src" :alt="img3.alt" id="img3" @click="selectImage($event.target.id)">
+        <img class="gallery" :src="img4.src" :alt="img4.alt" id="img4" @click="selectImage($event.target.id)">
+        <img class="gallery" :src="img5.src" :alt="img5.alt" id="img5" @click="selectImage($event.target.id)">
+        <img class="gallery" :src="img6.src" :alt="img6.alt" id="img6" @click="selectImage($event.target.id)">
+        <img class="gallery" :src="img7.src" :alt="img7.alt" id="img7" @click="selectImage($event.target.id)">
+        <img class="gallery" :src="img8.src" :alt="img8.alt" id="img8" @click="selectImage($event.target.id)">
+
+        <noscript>
+          <p><i>JavaScript must be enabled in order to display the media on this page, sorry!</i></p>
+        </noscript>
+        
+        <!-- Film section -->
+        <h2 id="film-heading">film</h2>
+        <p>
+          Below is a short film I created as a project for a film course I took as an undergraduate.
+          It is modeled after the <a href="https://en.wikipedia.org/wiki/Documentary_film#City-symphony" target="_blank">city-symphony</a> 
+          style of avant-doc film that became popular in the 1920s, but with a twist: rather than feature a city, this film showcases the
+          small village in upstate New York where I spent most of my adolescence.
+        </p>
+        <iframe id="village-symphony-video" src="https://www.youtube.com/embed/sQ2CW6B8Ma8" allowfullscreen></iframe>
+  
+      </main>
+      <footer>
+        © Copyright 2021 Natalie Bates
+      </footer>
+    </div>
+
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/gallery.js"></script>
   </body>
 </html>

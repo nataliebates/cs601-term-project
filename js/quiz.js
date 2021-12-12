@@ -1,20 +1,27 @@
 /**
  * Fetches the quiz data JSON file and processes the response
+ * @throws Error when the response is not ok 
  */
 async function getQuizData() {
   await fetch("../documents/quiz.json")
-    .then(response => response.json())
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Unable to fetch the quiz data.");
+      }
+    })
     .then(data => {
       console.log(data);
       quizData = data.quiz;
 
       startButton.style.display = "none";
+      quizCard.style.display = "block";
       displayNextQuestion();
     })
     .catch(error => {
       console.error('Error:', error);
     });
-
 }
 
 /**
@@ -50,6 +57,7 @@ let displayNextQuestion = () => {
 
 
 // Get elements that will need to be manipulated
+let quizCard = document.getElementById("quiz-card");
 let startButton = document.getElementById("start-quiz-button");
 let quizQuestion = document.getElementById("quiz-question");
 let quizAnswer = document.getElementById("quiz-answer");
